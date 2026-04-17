@@ -10,6 +10,6 @@ public class Food : MonoBehaviour
         {
             health.TakeDamage(attackPoint);
         }
-        Destroy(gameObject);
+        ProjectileObjectPool.staticInstance.Return(this.gameObject);
     }
 }
